@@ -19,6 +19,7 @@
   --color-black-14: rgba(0, 0, 0, 0.14);
   --color-black-15: rgba(0, 0, 0, 0.15);
   --color-black-20: rgba(0, 0, 0, 0.2);
+  --color-common-black: #2f2f37;
 }
 
 body {
@@ -72,4 +73,55 @@ input {
   clip-path: inset(100%);
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
+}
+
+.container {
+  width: 288px;
+  margin: 0 auto;
+}
+
+.header {
+  border-bottom: 1px solid var(--color-cornflower);
+  box-shadow: 0 1px 6px 0 var(--color-navy-blue-8),
+    0 1px 1px 0 var(--color-navy-blue-16), 0 2px 1px 0 var(--color-navy-blue-8);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-iris);
+}
+
+.header .logo,
+.header__menu {
+  padding: 16px 0;
+}
+
+.header__logo--highlight {
+  color: var(--color-navy-blue);
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6px;
+  margin-right: 3.6px;
+  cursor: pointer;
+}
+
+.header__menu-item {
+  width: 16px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--color-common-black);
 }
