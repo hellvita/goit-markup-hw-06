@@ -425,6 +425,13 @@ input {
   }
 }
 
+@media (min-width: 1158px) {
+  .hero {
+    max-width: 1440px;
+    padding: 188px 0;
+  }
+}
+
 .hero .container {
   display: flex;
   flex-direction: column;
@@ -450,6 +457,12 @@ input {
     font-size: 56px;
     line-height: 1.08;
     max-width: 496px;
+  }
+}
+
+@media (min-width: 1158px) {
+  .hero .container {
+    gap: 48px;
   }
 }
 
