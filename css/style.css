@@ -275,7 +275,7 @@ input {
 
 .side-menu .container {
   height: 100%;
-  padding: 72px 0 40px 8px;
+  padding: 72px 2px 40px 4px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -284,7 +284,8 @@ input {
 
 @media (min-width: 320px) {
   .side-menu .container {
-    padding-left: 16px;
+    padding: 72px 0 40px 0;
+    margin: 0 auto;
   }
 }
 
@@ -561,4 +562,44 @@ button:focus {
   .hero__button {
     min-width: 169px;
   }
+}
+
+.features {
+  padding: 96px 0;
+}
+
+.section__title {
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: inherit;
+  color: var(--color-navy-blue);
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  justify-content: center;
+}
+
+.features__item-icon {
+  display: none;
+}
+
+.info-title {
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: inherit;
+  color: var(--color-navy-blue);
+  margin-bottom: 8px;
+}
+
+.info-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: inherit;
+  letter-spacing: inherit;
 }
