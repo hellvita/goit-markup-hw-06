@@ -591,13 +591,25 @@ button:focus {
   justify-content: center;
 }
 
+@media (min-width: 768px) {
+  .features__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+  .features__card {
+    flex-basis: calc((100% - 1 * 24px) / 2);
+  }
+}
+
 .features__item-icon {
   display: none;
 }
 
 .info-title {
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.118;
   letter-spacing: inherit;
   color: var(--color-navy-blue);
   margin-bottom: 8px;
