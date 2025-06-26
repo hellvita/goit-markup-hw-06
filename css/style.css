@@ -569,13 +569,19 @@ button:focus {
 }
 
 .section__title {
-  font-size: 36px;
+  font-size: 20px;
   line-height: 1.2;
   letter-spacing: inherit;
   color: var(--color-navy-blue);
   text-align: center;
   text-transform: capitalize;
   margin-bottom: 72px;
+}
+
+@media (min-width: 320px) {
+  .section__title {
+    font-size: 36px;
+  }
 }
 
 .features__list {
@@ -590,7 +596,7 @@ button:focus {
 }
 
 .info-title {
-  font-size: 36px;
+  font-size: 16px;
   line-height: 1.2;
   letter-spacing: inherit;
   color: var(--color-navy-blue);
@@ -598,8 +604,17 @@ button:focus {
 }
 
 .info-text {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   line-height: inherit;
   letter-spacing: inherit;
+}
+
+@media (min-width: 320px) {
+  .info-title {
+    font-size: 36px;
+  }
+  .info-text {
+    font-size: 16px;
+  }
 }
