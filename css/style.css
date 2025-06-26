@@ -568,6 +568,12 @@ button:focus {
   padding: 96px 0;
 }
 
+@media (min-width: 1158px) {
+  .features {
+    padding: 120px 0;
+  }
+}
+
 .section__title {
   font-size: 20px;
   line-height: 1.2;
@@ -591,6 +597,10 @@ button:focus {
   justify-content: center;
 }
 
+.features__item-icon {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .features__list {
     flex-direction: row;
@@ -603,8 +613,33 @@ button:focus {
   }
 }
 
-.features__item-icon {
-  display: none;
+@media (min-width: 1158px) {
+  .features__list {
+    flex-wrap: nowrap;
+  }
+  .features__card {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+  }
+  .features__item-icon {
+    display: block;
+  }
+}
+
+.features__item-icon--backgroud {
+  border: 1px solid var(--color-light-slate);
+  border-radius: 4px;
+  background-color: var(--color-cloud);
+  width: 264px;
+  height: 112px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.features__card .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .info-title {
@@ -628,5 +663,11 @@ button:focus {
   }
   .info-text {
     font-size: 16px;
+  }
+}
+
+@media (min-width: 1158px) {
+  .info-title {
+    font-size: 20px;
   }
 }
