@@ -564,7 +564,8 @@ button:focus {
   }
 }
 
-.features {
+.features,
+.team {
   padding: 96px 0;
 }
 
@@ -644,10 +645,14 @@ button:focus {
 
 .info-title {
   font-size: 16px;
-  line-height: 1.118;
+  line-height: 1.2;
   letter-spacing: inherit;
   color: var(--color-navy-blue);
   margin-bottom: 8px;
+}
+
+.features__info-title {
+  line-height: 1.118;
 }
 
 .info-text {
@@ -658,7 +663,7 @@ button:focus {
 }
 
 @media (min-width: 320px) {
-  .info-title {
+  .features__info-title {
     font-size: 36px;
   }
   .info-text {
@@ -670,4 +675,39 @@ button:focus {
   .info-title {
     font-size: 20px;
   }
+}
+
+.team {
+  background-color: var(--color-cloud);
+}
+
+.team__list {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.team__card {
+  background-color: var(--color-white);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0 2px 1px 0 var(--color-navy-blue-8),
+    0 1px 1px 0 var(--color-navy-blue-16), 0 1px 6px 0 var(--color-navy-blue-8);
+}
+
+.team__info-container {
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team__info-text {
+  margin-bottom: 8px;
+}
+
+.team__socials-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
 }
