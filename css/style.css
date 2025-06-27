@@ -96,12 +96,18 @@ input {
   .container {
     width: 736px;
   }
+  .team .container {
+    padding: 0 92px;
+  }
 }
 
 @media (min-width: 1158px) {
   .container {
     width: 1158px;
     padding: 0 15px;
+  }
+  .team .container {
+    padding: 0;
   }
 }
 
@@ -695,6 +701,18 @@ button:focus {
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0 2px 1px 0 var(--color-navy-blue-8),
     0 1px 1px 0 var(--color-navy-blue-16), 0 1px 6px 0 var(--color-navy-blue-8);
+}
+
+@media (min-width: 768px) {
+  .team__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+  .team__card {
+    flex-basis: calc((100% - 1 * 24px) / 2);
+  }
 }
 
 .team__info-container {
