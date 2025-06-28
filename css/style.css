@@ -760,6 +760,18 @@ button:focus {
     0 1px 1px 0 var(--color-navy-blue-16), 0 1px 6px 0 var(--color-navy-blue-8);
 }
 
+@media (min-width: 768px) {
+  .portfolio__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+  .portfolio__card {
+    flex-basis: calc((100% - 1 * 24px) / 2);
+  }
+}
+
 .overlay {
   position: relative;
   overflow: hidden;
