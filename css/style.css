@@ -450,11 +450,11 @@ input {
 
 .hero,
 .footer {
+  width: 100%;
   background-color: var(--color-navy-blue);
 }
 
 .hero {
-  width: 100%;
   padding: 72px 0;
   background-image: linear-gradient(
       to bottom,
@@ -845,6 +845,19 @@ button:focus {
   justify-content: center;
 }
 
+@media (min-width: 768px) {
+  .footer .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+    align-items: baseline;
+    justify-content: flex-start;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
 .footer__logo {
   display: inline-block;
 }
@@ -864,6 +877,12 @@ button:focus {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .footer__title {
+    text-align: left;
+  }
+}
+
 .footer__text {
   font-size: 12px;
   color: var(--color-cloud);
@@ -877,6 +896,12 @@ button:focus {
 
 .description__text {
   max-width: 288px;
+}
+
+@media (min-width: 768px) {
+  .description__text {
+    max-width: 264px;
+  }
 }
 
 .footer__socials-list {
@@ -901,7 +926,19 @@ button:focus {
 }
 
 .footer-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
   max-width: 288px;
+}
+
+@media (min-width: 768px) {
+  .footer-form {
+    flex-direction: row;
+    gap: 24px;
+    max-width: 453px;
+  }
 }
 
 .footer-form__input {
@@ -911,12 +948,17 @@ button:focus {
   border: 1px solid var(--color-white-30);
   line-height: 2;
   box-shadow: 0px 4px 4px var(--color-black-15);
-  margin-bottom: 16px;
 }
 
 @media (min-width: 320px) {
   .footer-form__input {
     width: 288px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-form__input {
+    width: 264px;
   }
 }
 
@@ -931,7 +973,6 @@ button:focus {
   align-items: center;
   justify-content: center;
   padding: 8px 24px;
-  margin: 0 auto;
 }
 
 .footer-form__button .icon {
