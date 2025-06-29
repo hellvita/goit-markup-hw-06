@@ -589,6 +589,9 @@ button:focus {
   .portfolio {
     padding: 120px 0;
   }
+  .footer {
+    padding: 100px 0;
+  }
 }
 
 .section__title {
@@ -858,6 +861,20 @@ button:focus {
   }
 }
 
+@media (min-width: 1158px) {
+  .footer .container {
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1158px) {
+  .footer__description {
+    margin-right: 120px;
+  }
+}
+
 .footer__logo {
   display: inline-block;
 }
@@ -902,6 +919,9 @@ button:focus {
   .description__text {
     max-width: 264px;
   }
+  .footer__social-media {
+    margin-right: 80px;
+  }
 }
 
 .footer__socials-list {
@@ -909,6 +929,11 @@ button:focus {
   align-items: center;
   justify-content: center;
   gap: 16px;
+}
+
+.footer__socials-list .socials__link:hover,
+.footer__socials-list .socials__link:focus {
+  background-color: var(--color-green);
 }
 
 .form__input {
