@@ -991,6 +991,15 @@ button:focus {
   color: var(--color-white-30);
 }
 
+@media (min-width: 1158px) {
+  .footer-form__input {
+    border-color: var(--color-white);
+  }
+  .footer-form__input::placeholder {
+    color: var(--color-white);
+  }
+}
+
 .footer-form__button {
   min-width: 165px;
   height: 40px;
