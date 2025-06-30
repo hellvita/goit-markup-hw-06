@@ -1061,6 +1061,12 @@ button:focus {
   }
 }
 
+@media (min-width: 1158px) {
+  .modal-overlay.user-contacts .container {
+    padding: 0;
+  }
+}
+
 .user-contacts .modal__close-btn {
   border: 1px solid var(--color-black-10);
   background-color: var(--color-cornflower);
