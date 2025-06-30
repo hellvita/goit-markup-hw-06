@@ -1051,6 +1051,16 @@ button:focus {
   }
 }
 
+@media (min-width: 768px) {
+  .user-contacts .modal {
+    width: 408px;
+    height: 584px;
+  }
+  .modal-overlay.user-contacts .container {
+    width: 360px;
+  }
+}
+
 .user-contacts .modal__close-btn {
   border: 1px solid var(--color-black-10);
   background-color: var(--color-cornflower);
@@ -1061,6 +1071,12 @@ button:focus {
   font-weight: 500;
   text-align: center;
   margin: 0 auto 16px auto;
+}
+
+@media (min-width: 768px) {
+  .modal__title {
+    max-width: 360px;
+  }
 }
 
 .modal-form__item-input {
