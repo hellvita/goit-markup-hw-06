@@ -10,6 +10,7 @@
   --color-green: #31d0aa;
   --color-slate: #434455;
   --color-light-slate: #8e8f99;
+  --color-light-slate-50: rgba(142, 143, 153, 0.5);
   --color-cornflower: #e7e9fc;
   --color-cornflower-10: rgba(231, 233, 252, 0.1);
   --color-cloud: #f4f4fd;
@@ -1040,6 +1041,16 @@ button:focus {
     0 1px 3px 0 var(--color-black-12), 0 2px 1px 0 var(--color-black-20);
 }
 
+@media (min-width: 320px) {
+  .user-contacts .modal {
+    width: 288px;
+    height: 623px;
+  }
+  .modal-overlay.user-contacts .container {
+    width: 256px;
+  }
+}
+
 .user-contacts .modal__close-btn {
   border: 1px solid var(--color-black-10);
   background-color: var(--color-cornflower);
@@ -1111,7 +1122,7 @@ button:focus {
   height: 120px;
   padding: 8px 16px;
   resize: none;
-  color: var(--color-navy-blue-modal);
+  color: var(--color-light-slate-50);
 }
 
 .modal-form__textarea::placeholder {
@@ -1176,4 +1187,11 @@ button:focus {
   height: 56px;
   padding: 16px 32px;
   margin: 0 auto;
+}
+
+@media (min-width: 320px) {
+  .modal-form__button {
+    width: auto;
+    min-width: 169px;
+  }
 }
