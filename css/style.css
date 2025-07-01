@@ -83,6 +83,12 @@ input {
   overflow: hidden;
 }
 
+.container-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   width: 100%;
   padding: 0 5px;
@@ -113,6 +119,10 @@ input {
   .team .container {
     padding: 0;
   }
+}
+
+main {
+  flex-grow: 1;
 }
 
 .header {
