@@ -58,7 +58,7 @@ a {
 img {
   display: block;
   width: 100%;
-  height: auto;
+  object-fit: cover;
 }
 
 address {
@@ -99,6 +99,9 @@ input {
     width: 288px;
     padding: 0;
   }
+  .team .container {
+    padding: 0 12px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -116,7 +119,7 @@ input {
     padding: 0 15px;
   }
   .team .container {
-    padding: 0;
+    padding: 0 15px;
   }
 }
 
@@ -834,6 +837,20 @@ button {
 .overlay {
   position: relative;
   overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .portfolio__head-container img {
+    width: 288px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 1157px) {
+  .portfolio__head-container img {
+    width: 356px;
+    height: 300px;
+  }
 }
 
 .portfolio__head-container .overlay__text {
