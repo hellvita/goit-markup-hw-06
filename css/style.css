@@ -116,6 +116,10 @@ input {
 }
 
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background-color: var(--color-white);
   border-bottom: 1px solid var(--color-cornflower);
   box-shadow: 0 1px 6px 0 var(--color-navy-blue-8),
     0 1px 1px 0 var(--color-navy-blue-16), 0 2px 1px 0 var(--color-navy-blue-8);
