@@ -160,8 +160,7 @@ main {
   color: var(--color-iris);
 }
 
-.header .logo,
-.header__menu-btn {
+.header .logo {
   padding: 16px 0;
 }
 
@@ -210,11 +209,7 @@ main {
 
 .header__menu-btn {
   background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  gap: 3.6px;
-  margin-right: 3.6px;
-  cursor: pointer;
+  padding: 16px 3.6px;
 }
 
 @media (min-width: 768px) {
@@ -223,11 +218,9 @@ main {
   }
 }
 
-.header__menu-item {
-  width: 16px;
-  height: 2px;
-  border-radius: 2px;
-  background-color: var(--color-common-black);
+.header__menu-btn .icon {
+  display: flex;
+  fill: var(--color-common-black);
 }
 
 .modal-overlay {
