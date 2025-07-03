@@ -58,6 +58,7 @@ a {
 img {
   display: block;
   width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -834,14 +835,12 @@ button {
 
 @media (max-width: 767px) {
   .portfolio__head-container img {
-    width: 288px;
     height: 280px;
   }
 }
 
-@media (max-width: 1157px) {
+@media (min-width: 768px) and (max-width: 1157px) {
   .portfolio__head-container img {
-    width: 356px;
     height: 300px;
   }
 }
