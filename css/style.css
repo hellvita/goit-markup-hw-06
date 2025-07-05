@@ -1,3 +1,4 @@
+/* Primary color scheme from the layout style guide */
 :root {
   --color-iris: #4d5ae5;
   --color-ocean: #404bbf;
@@ -33,6 +34,9 @@ body {
   line-height: 1.5;
 }
 
+/* ==================================
+   Start of: Reset styles
+   ================================== */
 h1,
 h2,
 h3,
@@ -55,19 +59,25 @@ a {
   display: block;
 }
 
+address {
+  font-style: normal;
+}
+/* ==================================
+   End of: Reset styles
+   ================================== */
+
+/* ==================================
+   Start of: Add default styles for basic elements
+   ================================== */
+input {
+  font-family: inherit;
+}
+
 img {
   display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
-}
-
-address {
-  font-style: normal;
-}
-
-input {
-  font-family: inherit;
 }
 
 button {
@@ -88,7 +98,11 @@ button {
 .button--regular:focus {
   background-color: var(--color-ocean);
 }
+/* ==================================
+   End of: Add default styles for basic elements
+   ================================== */
 
+/* Pattern to hide the element visually only */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -102,6 +116,9 @@ button {
   overflow: hidden;
 }
 
+/* ==================================
+   Start of: Implementing a glued page footer
+   ================================== */
 .container-page {
   background-color: inherit;
   min-height: 100vh;
@@ -109,12 +126,22 @@ button {
   flex-direction: column;
 }
 
+main {
+  flex-grow: 1;
+}
+/* ==================================
+   End of: Implementing a glued page footer
+   ================================== */
+
+/* The container element is used to limit 
+   the maximum width of the page content */
 .container {
   width: 100%;
   padding: 0 5px;
   margin: 0 auto;
 }
 
+/* Styles for mobile */
 @media (min-width: 320px) {
   .container {
     width: 288px;
@@ -125,6 +152,7 @@ button {
   }
 }
 
+/* Styles for tablet */
 @media (min-width: 768px) {
   .container {
     width: 736px;
@@ -134,6 +162,7 @@ button {
   }
 }
 
+/* Styles for desktop */
 @media (min-width: 1158px) {
   .container {
     width: 1158px;
@@ -144,10 +173,9 @@ button {
   }
 }
 
-main {
-  flex-grow: 1;
-}
-
+/* ==================================
+   Start of: Header section
+   ================================== */
 .header {
   position: sticky;
   top: 0;
@@ -165,12 +193,15 @@ main {
   flex-wrap: wrap;
 }
 
+/* Styles for all devices which viewport
+   width is above 320px */
 @media (min-width: 320px) {
   .header .container {
     flex-wrap: nowrap;
   }
 }
 
+/* Add default styles for the logo element */
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -185,6 +216,7 @@ main {
   padding: 16px 0;
 }
 
+/* Styles for tablet */
 @media (min-width: 768px) {
   .header .logo {
     padding: 24px 0;
@@ -192,6 +224,7 @@ main {
   }
 }
 
+/* Styles for desktop */
 @media (min-width: 1158px) {
   .header .logo {
     margin-right: 76px;
@@ -202,11 +235,14 @@ main {
   color: var(--color-navy-blue);
 }
 
+/* Hide navigation and contacts bar
+   on mobile */
 .header__nav-list,
 .header__contacts {
   display: none;
 }
 
+/* Styles for tablet */
 @media (min-width: 768px) {
   .header__nav,
   .header__nav-list,
@@ -220,6 +256,7 @@ main {
   }
 }
 
+/* Styles for desktop */
 @media (min-width: 1158px) {
   .header__contacts-list {
     display: flex;
@@ -232,6 +269,8 @@ main {
   padding: 16px 3.6px;
 }
 
+/* Hide the button that opens the side 
+   menu if it's tablet or desktop */
 @media (min-width: 768px) {
   .header__menu-btn {
     display: none;
@@ -242,7 +281,11 @@ main {
   display: flex;
   fill: var(--color-common-black);
 }
+/* ==================================
+   End of: Header section
+   ================================== */
 
+/* Add default styles for the modal-overlay element */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -257,11 +300,13 @@ main {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Allow to show the modal-overlay element */
 .is-open {
   opacity: 1;
   pointer-events: auto;
 }
 
+/* Add default styles for the modal element */
 .modal {
   position: absolute;
   top: 50%;
@@ -272,6 +317,21 @@ main {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ==================================
+   Start of: The side menu element
+   ================================== */
+/**
+* Here also styles for the navigation 
+* and contacts bar that visible in header
+* when it's tablet or desktop
+*
+* Side menu also include the socials media 
+* bar which is also used in another sections
+* (with the same main styles)
+*/
+
+/* Do not allow to show the side menu
+   if it's tablet or desktop */
 @media (min-width: 768px) {
   .modal-overlay.side-menu {
     display: none;
@@ -283,16 +343,21 @@ main {
   height: 100%;
 }
 
+/* Styles for mobile */
 @media (min-width: 320px) {
   .side-menu .modal {
     width: 320px;
   }
 }
 
+/* Add default color for icons in all
+   the modal elements */
 .modal .icon {
   fill: var(--color-navy-blue);
 }
 
+/* Add default styles for button that
+   close the modal elment */
 .modal__close-btn {
   position: absolute;
   top: 24px;
@@ -337,6 +402,7 @@ main {
   justify-content: space-between;
 }
 
+/* Styles for mobile */
 @media (min-width: 320px) {
   .side-menu .container {
     padding: 72px 0 40px 0;
@@ -344,12 +410,16 @@ main {
   }
 }
 
+/* Navigation bar sub-section
+   ================================== */
 .side-menu__nav-list {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
+/* Add default styles for the link
+   elment */
 .nav-list__link {
   font-size: 24px;
   font-weight: 700;
@@ -362,12 +432,14 @@ main {
   color: var(--color-ocean);
 }
 
+/* Styles for mobile */
 @media (min-width: 320px) {
   .nav-list__link {
     font-size: 36px;
   }
 }
 
+/* Styles for tablet and desktop */
 @media (min-width: 768px) {
   .nav-list__link {
     font-size: 16px;
@@ -401,12 +473,16 @@ main {
   gap: 48px;
 }
 
+/* Contacts bar sub-section
+   ================================== */
 .side-menu__contacts-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
+/* Add default styles for the 
+   link elments in the contacts bar */
 .contacts-list__link {
   font-size: 12px;
   font-weight: 500;
@@ -415,23 +491,28 @@ main {
   letter-spacing: 0.02em;
 }
 
+/* Styles for tablet and desktop */
 @media (max-width: 767px) {
   .contacts-list__item:nth-child(1) .link {
     color: var(--color-iris);
   }
 }
 
+/* Add default styles for all the 
+   link elments */
 .link:hover:not(.logo),
 .link:focus:not(.logo) {
   color: var(--color-ocean);
 }
 
+/* Styles for mobile */
 @media (min-width: 320px) {
   .contacts-list__link {
     font-size: 20px;
   }
 }
 
+/* Styles for tablet */
 @media (min-width: 768px) {
   .contacts-list__link {
     font-size: 12px;
@@ -442,6 +523,7 @@ main {
   }
 }
 
+/* Styles for desktop */
 @media (min-width: 1158px) {
   .contacts-list__link {
     font-size: 16px;
@@ -451,6 +533,10 @@ main {
   }
 }
 
+/* Socials media bar sub-section
+   ================================== */
+/* Add default styles for all the 
+   list elments in the socials media bar */
 .socials-list {
   display: flex;
 }
@@ -461,6 +547,8 @@ main {
   justify-content: center;
 }
 
+/* Styles for all devices which viewport
+   width is above 320px */
 @media (min-width: 320px) {
   .side-menu__socials-list {
     flex-wrap: nowrap;
@@ -487,6 +575,9 @@ main {
 .socials__link:focus {
   background-color: var(--color-ocean);
 }
+/* ==================================
+   End of: The side menu element
+   ================================== */
 
 .socials__link .icon,
 .footer-form__button .icon {
