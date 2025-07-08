@@ -602,7 +602,7 @@ main {
       var(--color-grey),
       var(--color-grey)
     ),
-    url(../images/hero/bg-pic.jpg);
+    url(../images/hero/bg-pic-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -610,17 +610,63 @@ main {
 }
 
 /* Use bigger background image for 
-   screen with bigger pixel density */
-@media (min-resolution: 192dpi) {
+   screen with bigger pixel density
+   ================================== */
+@media (min-width: 320px) and (min-resolution: 192dpi) {
   .hero {
     background-image: linear-gradient(
         to bottom,
         var(--color-grey),
         var(--color-grey)
       ),
-      url(../images/hero/bg-pic@2x.jpg);
+      url(../images/hero/bg-pic-mobile@2x.jpg);
   }
 }
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-grey),
+        var(--color-grey)
+      ),
+      url(../images/hero/bg-pic-tablet.jpg);
+  }
+}
+
+@media (min-width: 768px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-grey),
+        var(--color-grey)
+      ),
+      url(../images/hero/bg-pic-tablet@2x.jpg);
+  }
+}
+
+@media (min-width: 1158px) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-grey),
+        var(--color-grey)
+      ),
+      url(../images/hero/bg-pic-pc.jpg);
+  }
+}
+
+@media (min-width: 1158px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-grey),
+        var(--color-grey)
+      ),
+      url(../images/hero/bg-pic-pc@2x.jpg);
+  }
+}
+/* ================================== */
 
 /* Styles for mobile */
 @media (min-width: 320px) {
