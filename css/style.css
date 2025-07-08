@@ -894,6 +894,13 @@ main {
   }
 }
 
+/* Styles for mobile */
+@media (max-width: 767px) {
+  .features__info-title {
+    text-align: center;
+  }
+}
+
 /* Styles for desktop */
 @media (min-width: 1158px) {
   .info-title {
@@ -1121,6 +1128,14 @@ main {
 
 .footer__logo {
   display: inline-block;
+}
+
+/* Styles for mobile */
+@media (max-width: 767px) {
+  .footer__logo {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .footer__logo--highlight {
