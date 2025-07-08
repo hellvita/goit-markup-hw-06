@@ -1103,14 +1103,20 @@ main {
 /* Styles for tablet */
 @media (min-width: 768px) {
   .footer .container {
+    /* width: 584px; */
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 72px;
     align-items: baseline;
     justify-content: flex-start;
-    padding-left: 120px;
-    padding-right: 120px;
+  }
+}
+
+/* Styles for tablet */
+@media (min-width: 768px) and (max-width: 1157px) {
+  .footer .container {
+    width: 584px;
   }
 }
 
@@ -1119,7 +1125,7 @@ main {
   .footer .container {
     flex-wrap: nowrap;
     gap: 0;
-    padding: 0;
+    padding: 0 15px;
   }
   .footer__description {
     margin-right: 120px;
